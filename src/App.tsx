@@ -47,7 +47,7 @@ function App() {
         </div>
         <h3>{author}</h3>
         <div className='profile-projects'>
-          <a href='#' target='_blank' rel="noreferrer">
+          <a href={social.github.link} target='_blank' rel="noreferrer">
             <p><span className={`w3-tag ${getClassByStatus('calculator')}`}>{getStatus('calculator')}</span></p>
             <button className="w3-button w3-border w3-hover-black w3-border-white w3-round">Calculadora</button>
           </a>
