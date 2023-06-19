@@ -8,10 +8,8 @@ on:
     branches:
       - master
 
-
 jobs:
   Deploy:
-    if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
 
     steps:
