@@ -6,7 +6,7 @@ function App() {
   const author = "Pedro Yago Rabelo de Sousa";
   const projects = [
     {
-      name: "calculator",
+      name: "Calculadora",
       link: "https://pedroyrsousa.github.io/calculadora/",
       completed: true,
     },
