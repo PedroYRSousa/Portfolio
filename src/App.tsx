@@ -12,7 +12,7 @@ function App() {
     },
     {
       name: "Chat p2p",
-      link: "#",
+      link: "https://pedroyrsousa.github.io/chatp2p/",
       completed: false,
     },
   ];
