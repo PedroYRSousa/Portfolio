@@ -10,6 +10,11 @@ function App() {
       link: "https://pedroyrsousa.github.io/calculadora/",
       completed: true,
     },
+    {
+      name: "Chat p2p",
+      link: "#",
+      completed: false,
+    },
   ];
   //const projects = {
   //  calculator: "https://pedroyrsousa.github.io/calculadora/",
