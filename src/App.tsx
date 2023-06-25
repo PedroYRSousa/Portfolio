@@ -4,9 +4,16 @@ import "./App.css";
 
 function App() {
   const author = "Pedro Yago Rabelo de Sousa";
-  const projects = {
-    calculator: "https://pedroyrsousa.github.io/calculadora/",
-  };
+  const projects = [
+    {
+      name: "calculator",
+      link: "https://pedroyrsousa.github.io/calculadora/",
+      completed: true,
+    },
+  ];
+  //const projects = {
+  //  calculator: "https://pedroyrsousa.github.io/calculadora/",
+  //};
   const social = {
     profile: {
       link: "https://github.com/PedroYRSousa",
@@ -30,13 +37,6 @@ function App() {
     },
   };
 
-  function getStatus(project: string): string {
-    return (projects as any)[project] ? "Concluído" : "Em construção";
-  }
-  function getClassByStatus(project: string): string {
-    return (projects as any)[project] ? "w3-green" : "w3-red";
-  }
-
   return (
     <main>
       <div className="profile">
@@ -51,16 +51,22 @@ function App() {
         </div>
         <h3>{author}</h3>
         <div className="profile-projects">
-          <a href={social.github.link} target="_blank" rel="noreferrer">
-            <p>
-              <span className={`w3-tag ${getClassByStatus("calculator")}`}>
-                {getStatus("calculator")}
-              </span>
-            </p>
-            <button className="w3-button w3-border w3-hover-black w3-border-white w3-round">
-              Calculadora
-            </button>
-          </a>
+          {projects.map((project) => (
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <p>
+                <span
+                  className={`w3-tag ${
+                    project.completed ? "w3-green" : "w3-red"
+                  }`}
+                >
+                  {project.completed ? "Concluído" : "Em construção"}
+                </span>
+              </p>
+              <button className="w3-button w3-border w3-hover-black w3-border-white w3-round">
+                {project.name}
+              </button>
+            </a>
+          ))}
         </div>
       </div>
 
